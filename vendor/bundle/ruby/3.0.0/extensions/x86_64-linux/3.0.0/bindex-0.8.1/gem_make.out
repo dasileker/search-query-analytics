@@ -1,0 +1,15 @@
+current directory: /home/amine/desktop/search-query-analyticw/vendor/bundle/ruby/3.0.0/gems/bindex-0.8.1/ext/skiptrace
+/home/amine/.rvm/rubies/ruby-3.0.0/bin/ruby -I /home/amine/.rvm/rubies/ruby-3.0.0/lib/ruby/site_ruby/3.0.0 -r ./siteconf20230409-440-tc7t3g.rb extconf.rb
+creating Makefile
+
+current directory: /home/amine/desktop/search-query-analyticw/vendor/bundle/ruby/3.0.0/gems/bindex-0.8.1/ext/skiptrace
+make DESTDIR\= clean
+
+current directory: /home/amine/desktop/search-query-analyticw/vendor/bundle/ruby/3.0.0/gems/bindex-0.8.1/ext/skiptrace
+make DESTDIR\=
+compiling cruby.c
+linking shared-object skiptrace/internal/cruby.so
+
+current directory: /home/amine/desktop/search-query-analyticw/vendor/bundle/ruby/3.0.0/gems/bindex-0.8.1/ext/skiptrace
+make DESTDIR\= install
+/usr/bin/install -c -m 0755 cruby.so ./.gem.20230409-440-da0um4/skiptrace/internal
