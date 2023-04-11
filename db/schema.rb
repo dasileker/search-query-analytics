@@ -10,16 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_04_09_221756) do
+ActiveRecord::Schema[7.0].define(version: 2023_04_11_154317) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "searches", force: :cascade do |t|
-    t.string "querystring"
-    t.bigint "user_id", null: false
+  create_table "articles", force: :cascade do |t|
+    t.string "title"
+    t.text "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_searches_on_user_id"
+  end
+
+  create_table "search_histories", force: :cascade do |t|
+    t.string "query"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "count", default: 1
+    t.bigint "user_id", null: false
+    t.index ["user_id"], name: "index_search_histories_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -34,5 +42,5 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_09_221756) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "searches", "users"
+  add_foreign_key "search_histories", "users"
 end

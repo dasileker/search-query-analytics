@@ -1,5 +1,5 @@
-current directory: /home/amine/desktop/search-query-analyticw/vendor/bundle/ruby/3.0.0/gems/io-console-0.6.0/ext/io/console
-/home/amine/.rvm/rubies/ruby-3.0.0/bin/ruby -I /home/amine/.rvm/rubies/ruby-3.0.0/lib/ruby/site_ruby/3.0.0 -r ./siteconf20230409-440-3pwmh9.rb extconf.rb
+current directory: /home/amine/helpjuice/realtime_search_analytics/vendor/bundle/ruby/3.0.0/gems/io-console-0.6.0/ext/io/console
+/home/amine/.rvm/rubies/ruby-3.0.0/bin/ruby -I /home/amine/.rvm/rubies/ruby-3.0.0/lib/ruby/site_ruby/3.0.0 -r ./siteconf20230411-428-j6wwj8.rb extconf.rb
 checking for termios.h... yes
 checking for cfmakeraw() in termios.h... yes
 checking for sys/ioctl.h... yes
@@ -7,14 +7,14 @@ checking for HAVE_RUBY_FIBER_SCHEDULER_H... no
 checking for rb_scheduler_timeout()... no
 creating Makefile
 
-current directory: /home/amine/desktop/search-query-analyticw/vendor/bundle/ruby/3.0.0/gems/io-console-0.6.0/ext/io/console
+current directory: /home/amine/helpjuice/realtime_search_analytics/vendor/bundle/ruby/3.0.0/gems/io-console-0.6.0/ext/io/console
 make DESTDIR\= clean
 
-current directory: /home/amine/desktop/search-query-analyticw/vendor/bundle/ruby/3.0.0/gems/io-console-0.6.0/ext/io/console
+current directory: /home/amine/helpjuice/realtime_search_analytics/vendor/bundle/ruby/3.0.0/gems/io-console-0.6.0/ext/io/console
 make DESTDIR\=
 compiling console.c
 linking shared-object io/console.so
 
-current directory: /home/amine/desktop/search-query-analyticw/vendor/bundle/ruby/3.0.0/gems/io-console-0.6.0/ext/io/console
+current directory: /home/amine/helpjuice/realtime_search_analytics/vendor/bundle/ruby/3.0.0/gems/io-console-0.6.0/ext/io/console
 make DESTDIR\= install
-/usr/bin/install -c -m 0755 console.so ./.gem.20230409-440-s2jor8/io
+/usr/bin/install -c -m 0755 console.so ./.gem.20230411-428-3a2ezd/io

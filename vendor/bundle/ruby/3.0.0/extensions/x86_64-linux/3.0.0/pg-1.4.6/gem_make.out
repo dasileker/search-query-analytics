@@ -1,5 +1,5 @@
-current directory: /home/amine/desktop/search-query-analyticw/vendor/bundle/ruby/3.0.0/gems/pg-1.4.6/ext
-/home/amine/.rvm/rubies/ruby-3.0.0/bin/ruby -I /home/amine/.rvm/rubies/ruby-3.0.0/lib/ruby/site_ruby/3.0.0 -r ./siteconf20230409-440-je93ck.rb extconf.rb
+current directory: /home/amine/helpjuice/realtime_search_analytics/vendor/bundle/ruby/3.0.0/gems/pg-1.4.6/ext
+/home/amine/.rvm/rubies/ruby-3.0.0/bin/ruby -I /home/amine/.rvm/rubies/ruby-3.0.0/lib/ruby/site_ruby/3.0.0 -r ./siteconf20230411-428-wuwsw9.rb extconf.rb
 Calling libpq with GVL unlocked
 checking for pg_config... yes
 Using config values from /usr/bin/pg_config
@@ -24,10 +24,10 @@ checking for C99 variable length arrays... yes
 creating extconf.h
 creating Makefile
 
-current directory: /home/amine/desktop/search-query-analyticw/vendor/bundle/ruby/3.0.0/gems/pg-1.4.6/ext
+current directory: /home/amine/helpjuice/realtime_search_analytics/vendor/bundle/ruby/3.0.0/gems/pg-1.4.6/ext
 make DESTDIR\= clean
 
-current directory: /home/amine/desktop/search-query-analyticw/vendor/bundle/ruby/3.0.0/gems/pg-1.4.6/ext
+current directory: /home/amine/helpjuice/realtime_search_analytics/vendor/bundle/ruby/3.0.0/gems/pg-1.4.6/ext
 make DESTDIR\=
 compiling gvl_wrappers.c
 In file included from pg.h:60,
@@ -367,7 +367,7 @@ cc1: note: unrecognized command-line option ‘-Wno-parentheses-equality’ may 
 cc1: note: unrecognized command-line option ‘-Wno-constant-logical-operand’ may have been intended to silence earlier diagnostics
 linking shared-object pg_ext.so
 
-current directory: /home/amine/desktop/search-query-analyticw/vendor/bundle/ruby/3.0.0/gems/pg-1.4.6/ext
+current directory: /home/amine/helpjuice/realtime_search_analytics/vendor/bundle/ruby/3.0.0/gems/pg-1.4.6/ext
 make DESTDIR\= install
-/usr/bin/install -c -m 0755 pg_ext.so ./.gem.20230409-440-domp3n
+/usr/bin/install -c -m 0755 pg_ext.so ./.gem.20230411-428-161v48
 installing pg_ext libraries

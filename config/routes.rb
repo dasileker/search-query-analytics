@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
+  get 'landing/index'
   devise_for :users
-
-  require 'sidekiq/web'
-  mount Sidekiq::Web => '/sidekiq'
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
-  # root "articles#index"
+  root 'searches#new'
+  resources :searches, only: [:create]
+  resources :search_histories, only: [:index] do
+    collection do
+      get :trends
+    end
+  end
 end

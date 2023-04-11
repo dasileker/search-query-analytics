@@ -1,0 +1,9 @@
+<turbo-stream action="replace" target="last-search">
+  <template>
+    <% if @last_search.present? %>
+      <p id="last-search-<%= @last_search.id %>">Last search: <span class="text-success"><%= @last_search.query %></span> - <span class="text-primary-emphasis"><%= time_ago_in_words(@last_search.created_at) %> ago</span></p>
+    <% else %>
+      <p id="last-search">No recent searches.</p>
+    <% end %>
+  </template>
+</turbo-stream>

@@ -1,0 +1,23 @@
+
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6 text-center mt-5">
+      <h1>Real-time Search</h1>
+      <%= form_with url: searches_path, method: :post, data: { remote: true }, class: "form-inline justify-content-center mt-3" do |form| %>
+        <%= form.text_field :query, placeholder: "Search for articles", autocomplete: "off", class: "form-control mr-2" %>
+        <%= form.submit "Search", class: "btn btn-primary" %>
+      <% end %>
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-md-6 text-center mt-3">
+      <div id="search-results"></div>
+      <% if @last_search.present? %>
+        <p id="last-search" class="mt-3">Last search: <span class="text-success"><%= @last_search.query %></span> - <span class="text-danger"><%= time_ago_in_words(@last_search.created_at) %> ago</span></p>
+      <% else %>
+        <p id="last-search" class="mt-3">No recent searches.</p>
+      <% end %>
+      <%= link_to "View recent searches", search_histories_path, class: "btn btn-primary" %>
+    </div>
+  </div>
+</div>
