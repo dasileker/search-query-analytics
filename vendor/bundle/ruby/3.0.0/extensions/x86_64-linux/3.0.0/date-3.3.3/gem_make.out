@@ -1,14 +1,14 @@
-current directory: /home/amine/desktop/search-query-analyticw/vendor/bundle/ruby/3.0.0/gems/date-3.3.3/ext/date
-/home/amine/.rvm/rubies/ruby-3.0.0/bin/ruby -I /home/amine/.rvm/rubies/ruby-3.0.0/lib/ruby/site_ruby/3.0.0 -r ./siteconf20230409-440-5736r.rb extconf.rb
+current directory: /home/amine/helpjuice/realtime_search_analytics/vendor/bundle/ruby/3.0.0/gems/date-3.3.3/ext/date
+/home/amine/.rvm/rubies/ruby-3.0.0/bin/ruby -I /home/amine/.rvm/rubies/ruby-3.0.0/lib/ruby/site_ruby/3.0.0 -r ./siteconf20230411-428-uuq4ha.rb extconf.rb
 checking for rb_category_warn()... yes
 checking for timezone in time.h with  -Werror... yes
 checking for altzone in time.h with  -Werror... no
 creating Makefile
 
-current directory: /home/amine/desktop/search-query-analyticw/vendor/bundle/ruby/3.0.0/gems/date-3.3.3/ext/date
+current directory: /home/amine/helpjuice/realtime_search_analytics/vendor/bundle/ruby/3.0.0/gems/date-3.3.3/ext/date
 make DESTDIR\= clean
 
-current directory: /home/amine/desktop/search-query-analyticw/vendor/bundle/ruby/3.0.0/gems/date-3.3.3/ext/date
+current directory: /home/amine/helpjuice/realtime_search_analytics/vendor/bundle/ruby/3.0.0/gems/date-3.3.3/ext/date
 make DESTDIR\=
 compiling date_core.c
 compiling date_parse.c
@@ -16,6 +16,6 @@ compiling date_strftime.c
 compiling date_strptime.c
 linking shared-object date_core.so
 
-current directory: /home/amine/desktop/search-query-analyticw/vendor/bundle/ruby/3.0.0/gems/date-3.3.3/ext/date
+current directory: /home/amine/helpjuice/realtime_search_analytics/vendor/bundle/ruby/3.0.0/gems/date-3.3.3/ext/date
 make DESTDIR\= install
-/usr/bin/install -c -m 0755 date_core.so ./.gem.20230409-440-ix0uku
+/usr/bin/install -c -m 0755 date_core.so ./.gem.20230411-428-53rb0w

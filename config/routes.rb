@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
-  # root "articles#index"
+  get 'landing/index'
+  devise_for :users
+  root 'searches#new'
+  resources :searches, only: [:create]
+  resources :search_histories, only: [:index] do
+    collection do
+      get :trends
+    end
+  end
 end
