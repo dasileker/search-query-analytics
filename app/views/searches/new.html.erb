@@ -1,10 +1,10 @@
+
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-md-6 text-center mt-5">
       <h1>Real-time Search</h1>
       <%= form_with url: searches_path, method: :post, data: { remote: true }, class: "form-inline justify-content-center mt-3" do |form| %>
         <%= form.text_field :query, placeholder: "Search for articles", autocomplete: "off", class: "form-control mr-2" %>
-        <%= form.hidden_field :timestamp, value: Time.now.to_i %> <!-- Add this hidden field -->
         <%= form.submit "Search", class: "btn btn-primary" %>
       <% end %>
     </div>
