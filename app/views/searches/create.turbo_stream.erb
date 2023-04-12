@@ -1,4 +1,24 @@
-<turbo-stream action="replace" target="search-results">
+<%
+=begin%>
+ <turbo-stream action="replace" target="search-results">
+  <template>
+    <div id="search-results">
+      <% if @articles.present? %>
+        <ul>
+          <% @articles.each do |article| %>
+            <li><%= article.title %></li>
+          <% end %>
+        </ul>
+        <%= render partial: 'searches/last_search' %> <!-- Include the partial here -->
+      <% else %>
+        <p class="bg-success text-white">Search successfully added to the search history and trends</p>
+      <% end %>
+    </div>
+  </template>
+</turbo-stream> 
+<%
+=end%>
+<turbo-stream action="replace" target="search-results" id="<%= SecureRandom.hex %>">
   <template>
     <div id="search-results">
       <% if @articles.present? %>
@@ -8,10 +28,9 @@
           <% end %>
         </ul>
       <% else %>
-        <p class="bg-success text-white">Search successefuly added to the search history and trends</p>
+        <p class="bg-success text-white">Search successfully added to the search history and trends</p>
       <% end %>
+      <%= render partial: 'searches/last_search' %>
     </div>
   </template>
 </turbo-stream>
-
-<%= render partial: 'searches/last_search' %>

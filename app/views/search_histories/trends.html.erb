@@ -1,5 +1,7 @@
 
-<div class="container">
+<%
+=begin%>
+ <div class="container">
   <div class="row justify-content-center">
     <div class="col-md-6 text-center mt-5">
       <h1>Top Search Trends</h1>
@@ -25,4 +27,72 @@
       
     </div>
   </div>
+</div> 
+<%
+=end%>
+
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <h1 class="text-center mt-4">Most Searched Words/Trends</h1>
+      <div class="d-flex justify-content-center mt-3">
+        <%= link_to "Back to search", root_path, class: "btn btn-primary me-2 mx-2" %>
+        <%= link_to "View recent searches", search_histories_path, class: "btn btn-info" %>
+      </div>
+      <div class="mt-4">
+        <canvas id="trendsChart"></canvas>
+      </div>
+    </div>
+  </div>
 </div>
+
+
+<script>
+  window.onload = function () {
+    // Get the canvas context
+    const ctx = document.getElementById('trendsChart').getContext('2d');
+
+    // Create an empty chart
+    const trendsChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: [],
+        datasets: [{
+          label: 'Search count',
+          data: [],
+          backgroundColor: 'rgba(75, 192, 192, 0.2)',
+          borderColor: 'rgba(75, 192, 192, 1)',
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+
+    // Function to fetch and update data
+    function fetchDataAndUpdateChart() {
+      fetch('<%= trends_search_histories_path(format: :json) %>')
+        .then(response => response.json())
+        .then(data => {
+          // Update the chart data
+          trendsChart.data.labels = data.map(item => item.query);
+          trendsChart.data.datasets[0].data = data.map(item => item.count);
+
+          // Update the chart
+          trendsChart.update();
+        })
+        .catch(error => console.error('Error fetching data:', error));
+    }
+
+    // Fetch data and update the chart
+    fetchDataAndUpdateChart();
+
+    // Update the chart every 30 seconds
+    setInterval(fetchDataAndUpdateChart, 5000);
+  };
+</script>
