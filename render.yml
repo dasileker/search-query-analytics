@@ -1,11 +1,11 @@
 databases:
   - name: searchbox
-    databaseName: mysite
-    user: mysite
+    databaseName: searchbox_mjph
+    user: searchbox_mjph_user
 
 services:
   - type: web
-    name: searchbox
+    name: search_analytics
     env: ruby
     buildCommand: "./bin/render-build.sh"
     startCommand: "bundle exec puma -C config/puma.rb"
