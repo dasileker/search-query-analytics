@@ -6,12 +6,11 @@ class SearchesController < ApplicationController
   end
 
   def create
-    @query = params[:query]
-    @articles = Article.where("title LIKE ?", "%#{@query}%")
+    @query = params[:query].strip.downcase
+    @articles = Article.where("lower(title) LIKE ?", "%#{@query}%")
 
-    query_segments = @query.split(/\s+/)
-    query_segments.each do |segment|
-      search_history = current_user.search_histories.find_or_initialize_by(query: segment)
+    if @query.present? && @query.include?(" ")
+      search_history = current_user.search_histories.find_or_initialize_by(query: @query)
       if search_history.new_record?
         search_history.count = 1
       else
@@ -19,15 +18,13 @@ class SearchesController < ApplicationController
       end
       search_history.save
     end
-
-    flash.now[:success] = "Search added successfully!" if @query.present?
+    
     @last_search = current_user.search_histories.order(created_at: :desc).first
     respond_to do |format|
       format.turbo_stream
       format.html { redirect_to root_path }
     end
   end
-
 
   def last_search
     @last_search = current_user.search_histories.order(created_at: :desc).first
