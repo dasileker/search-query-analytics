@@ -1,0 +1,9 @@
+<h1>Top Searches</h1>
+<%= link_to "View recent searches", search_histories_path, class: "btn btn-info" %>
+<% @top_searches.each do |search_history| %>
+  <div>
+    <span><%= search_history.query %></span>
+    <span><%= search_history.count %> times</span>
+  </div>
+  <%= link_to "Back to search", root_path, class: "btn btn-primary mt-3" %>
+<% end %>

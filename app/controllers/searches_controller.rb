@@ -13,7 +13,6 @@ class SearchesController < ApplicationController
     query_segments.each do |segment|
     search_history = current_user.search_histories.find_or_initialize_by(query: @query)
       if search_history.new_record?
-        # color = "#{"red"}"
         search_history.count = 1
       else
         search_history.count += 1

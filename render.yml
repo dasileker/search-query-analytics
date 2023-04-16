@@ -5,6 +5,7 @@ databases:
 
 services:
   - type: web
+    name: search_analytics
     name: search
     env: ruby
     buildCommand: "./bin/render-build.sh"
